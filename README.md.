@@ -1,0 +1,58 @@
+
+# 🚀 DevToolbox
+
+**A free collection of simple, fast and useful developer tools.**
+
+DevToolbox brings everyday developer utilities together in one clean and responsive website.
+
+## ✨ Features
+
+- 🧩 **JSON Formatter** — Format and validate JSON data.
+- 🔄 **Base64 Converter** — Encode and decode Base64 text.
+- 🔐 **Password Generator** — Generate random passwords.
+- 🎨 **Color Picker** — Pick colors and get HEX codes.
+- 📝 **Text Counter** — Count characters and words.
+- 🔡 **Case Converter** — Convert text to uppercase or lowercase.
+- 🌙 **Theme Switcher** — Switch between dark and light themes.
+- 🔎 **Tool Search** — Quickly find the tool you need.
+
+## 🛠️ Built With
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+## 💻 Getting Started
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/DevToolbox.git
+   ```
+
+2. Open the project folder.
+3. Open `index.html` in your browser.
+
+No installation required!
+
+## 📁 Project Structure
+
+```text
+DevToolbox/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+## 🔒 Privacy
+
+The tools process your input locally in your browser. Your text is not sent to a server by these tools.
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+Made with ❤️ for developers.
