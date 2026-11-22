@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevToolbox is a free collection of useful developer tools.">
+  <title>DevToolbox — Developer Tools</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#">DevToolbox<span>.</span></a>
+    <button id="theme-toggle" class="theme-toggle" type="button">Toggle theme</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR EVERYDAY DEVELOPER TOOLKIT</p>
+      <h1>Simple tools.<br><span>Smarter workflow.</span></h1>
+      <p class="subtitle">A collection of free, fast and easy-to-use tools for developers.</p>
+      <input id="search" class="search" type="search" placeholder="Search for a tool..." aria-label="Search tools">
+    </section>
+
+    <section class="tools-section">
+      <div class="section-heading">
+        <h2>Explore tools</h2>
+        <span id="tool-count">6 tools</span>
+      </div>
+
+      <div class="tools-grid">
+        <article class="tool-card" data-tool="json formatter">
+          <div class="tool-icon">{"{}"}</div>
+          <h3>JSON Formatter</h3>
+          <p>Format and validate JSON data.</p>
+          <textarea id="json-input" placeholder='{"name":"DevToolbox"}'></textarea>
+          <button id="json-format" type="button">Format JSON</button>
+          <pre id="json-output" class="output"></pre>
+        </article>
+
+        <article class="tool-card" data-tool="base64 encoder decoder">
+          <div class="tool-icon">64</div>
+          <h3>Base64 Converter</h3>
+          <p>Encode or decode Base64 text.</p>
+          <textarea id="base64-input" placeholder="Enter your text..."></textarea>
+          <div class="button-row">
+            <button id="base64-encode" type="button">Encode</button>
+            <button id="base64-decode" type="button">Decode</button>
+          </div>
+          <pre id="base64-output" class="output"></pre>
+        </article>
+
+        <article class="tool-card" data-tool="password generator">
+          <div class="tool-icon">✳</div>
+          <h3>Password Generator</h3>
+          <p>Generate a random password.</p>
+          <div class="inline-control">
+            <label for="password-length">Length</label>
+            <input id="password-length" type="number" min="8" max="64" value="16">
+          </div>
+          <button id="password-generate" type="button">Generate password</button>
+          <pre id="password-output" class="output"></pre>
+        </article>
+
+        <article class="tool-card" data-tool="color picker hex">
+          <div class="tool-icon">◈</div>
+          <h3>Color Picker</h3>
+          <p>Choose a color and copy its HEX code.</p>
+          <input id="color-input" type="color" value="#7c5cff">
+          <pre id="color-output" class="output">#7c5cff</pre>
+        </article>
+
+        <article class="tool-card" data-tool="text counter character word">
+          <div class="tool-icon">Aa</div>
+          <h3>Text Counter</h3>
+          <p>Count characters and words.</p>
+          <textarea id="counter-input" placeholder="Type or paste your text..."></textarea>
+          <p class="stats">Characters: <strong id="char-count">0</strong></p>
+          <p class="stats">Words: <strong id="word-count">0</strong></p>
+        </article>
+
+        <article class="tool-card" data-tool="case converter uppercase lowercase">
+          <div class="tool-icon">Aa</div>
+          <h3>Case Converter</h3>
+          <p>Convert text to uppercase or lowercase.</p>
+          <textarea id="case-input" placeholder="Enter your text..."></textarea>
+          <div class="button-row">
+            <button id="uppercase" type="button">UPPERCASE</button>
+            <button id="lowercase" type="button">lowercase</button>
+          </div>
+        </article>
+      </div>
+      <p id="no-results" hidden>No tools found.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for developers, with care. © 2026 DevToolbox</p>
+  </footer>
+</body>
+</html>
