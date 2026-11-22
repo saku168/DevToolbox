@@ -1,11 +1,32 @@
 
 // DevToolbox - Main JavaScript
 
-// Theme switcher
+// Theme switcher with saved preference
 const themeToggle = document.getElementById("theme-toggle");
 
+try {
+  const savedTheme = localStorage.getItem("devtoolbox-theme");
+  if (savedTheme === "light") {
+    document.body.classList.add("light");
+  }
+} catch {
+  // The theme toggle still works when browser storage is unavailable.
+}
+
+themeToggle.setAttribute(
+  "aria-pressed",
+  String(document.body.classList.contains("light"))
+);
+
 themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light");
+  const isLight = document.body.classList.toggle("light");
+  themeToggle.setAttribute("aria-pressed", String(isLight));
+
+  try {
+    localStorage.setItem("devtoolbox-theme", isLight ? "light" : "dark");
+  } catch {
+    // Keep the current-page theme even if the preference cannot be saved.
+  }
 });
 
 // JSON Formatter
