@@ -26,7 +26,7 @@
     <section class="tools-section">
       <div class="section-heading">
         <h2>Explore tools</h2>
-        <span id="tool-count">6 tools</span>
+        <span id="tool-count">7 tools</span>
       </div>
 
       <div class="tools-grid">
@@ -78,6 +78,19 @@
           <textarea id="counter-input" placeholder="Type or paste your text..."></textarea>
           <p class="stats">Characters: <strong id="char-count">0</strong></p>
           <p class="stats">Words: <strong id="word-count">0</strong></p>
+        </article>
+
+
+        <article class="tool-card" data-tool="url encoder decoder encode decode">
+          <div class="tool-icon">URL</div>
+          <h3>URL Encoder / Decoder</h3>
+          <p>Safely encode or decode text for URLs.</p>
+          <textarea id="url-input" placeholder="Enter text or an encoded URL..."></textarea>
+          <div class="button-row">
+            <button id="url-encode" type="button">Encode</button>
+            <button id="url-decode" type="button">Decode</button>
+          </div>
+          <pre id="url-output" class="output" aria-live="polite"></pre>
         </article>
 
         <article class="tool-card" data-tool="case converter uppercase lowercase">
