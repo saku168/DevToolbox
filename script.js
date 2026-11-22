@@ -110,3 +110,20 @@ searchInput.addEventListener("input", () => {
   toolCount.textContent = `${visibleCount} tools`;
   noResults.hidden = visibleCount !== 0;
 });
+
+
+// URL Encoder / Decoder
+const urlInput = document.getElementById("url-input");
+const urlOutput = document.getElementById("url-output");
+
+document.getElementById("url-encode").addEventListener("click", () => {
+  urlOutput.textContent = encodeURIComponent(urlInput.value);
+});
+
+document.getElementById("url-decode").addEventListener("click", () => {
+  try {
+    urlOutput.textContent = decodeURIComponent(urlInput.value);
+  } catch {
+    urlOutput.textContent = "Invalid URL-encoded text. Please check your input.";
+  }
+});
